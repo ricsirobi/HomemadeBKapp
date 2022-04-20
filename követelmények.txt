@@ -22,3 +22,5 @@ Védés-bemutatás: május 10 - május 20
 Volumenek:
 Adatbázis: 2-3 tábla
 Kódmennyiség: MP2 utolsó zh kb kétszerese az elvárt
+
+_
