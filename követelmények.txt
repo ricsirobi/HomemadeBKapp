@@ -1,0 +1,24 @@
+Programozási technológiák
+Követelmények
+
+Páros munka
+JAVA nyelv használata
+Ablakos alkalmazás (ez akár mobil is lehet)
+User friendly
+Adatok tárolása adatbázisban
+Log
+OCP, SRP szem előtt tartása
+Unit tesztek
+Feladatkövetés
+Repository használata
+Nagyvonalú rendszerterv
+Legalább 2 tervezési minta használata. Legyen indokolt. Nem számítanak bele az alábbiak:
+Singleton
+Gyártó metódus
+Illesztő * (triviális azért ne legyen)
+Feltöltés: május 8
+Védés-bemutatás: május 10 - május 20 
+
+Volumenek:
+Adatbázis: 2-3 tábla
+Kódmennyiség: MP2 utolsó zh kb kétszerese az elvárt
