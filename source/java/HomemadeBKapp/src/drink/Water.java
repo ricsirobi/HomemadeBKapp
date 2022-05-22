@@ -4,6 +4,7 @@ public abstract class Water implements IWater{
 private int price;
 //private int quantity;
 private boolean ishot;
+private boolean hasice;
 
     public int getPrice() {return price;}
     public void setPrice(int price) {this.price = price;}
@@ -11,6 +12,14 @@ private boolean ishot;
 
     public boolean isHot() {return ishot;}
     public void setHot(boolean ishot) {this.ishot = ishot;}
+
+    public boolean hasIce() {return hasice;}
+    public void setIce(boolean hasice) {
+        if(ishot == true)
+            this.hasice = false;
+        else
+        this.hasice = hasice;
+    }
 
     @Override
     public String toString()

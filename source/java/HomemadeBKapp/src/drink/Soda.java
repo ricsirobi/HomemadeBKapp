@@ -13,6 +13,11 @@ public class Soda extends Water {
         return false;
     }
 
+    @Override
+    public boolean hasIce() {
+        return false;
+    }
+
     public boolean hasCo2() {return hasco2;}
 
 }
