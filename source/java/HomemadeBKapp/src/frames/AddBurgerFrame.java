@@ -42,11 +42,7 @@ public class AddBurgerFrame extends JFrame {
                 logger.info("CheeseBurger button clicked");
                 BurgerTypePanel.setVisible(false);
                 BaseBurger burger = new CheeseBurger();
-                /*try {
-                    FighterConfigFrame fighterConfigFrame = new FighterConfigFrame((Fighter) fighter);
-                } catch (SQLException ex) {
-                    ex.printStackTrace();
-                }*/
+                CheeseBurgerMenuFrame cheeseBurgerMenuFrame = new CheeseBurgerMenuFrame();
                 dispose();
             }
         });
@@ -57,11 +53,7 @@ public class AddBurgerFrame extends JFrame {
                 BurgerTypePanel.setVisible(false);
                 BaseBurger burger = new ChickenBurger();
 
-                /*try {
-                    TransportConfigFrame transportConfigFrame = new TransportConfigFrame((Transport) transport);
-                } catch (SQLException ex) {
-                    ex.printStackTrace();
-                }*/
+                ChickenBurgerMenuFrame chickenBurgerMenuFrame = new ChickenBurgerMenuFrame();
                 dispose();
             }
         });
@@ -72,11 +64,7 @@ public class AddBurgerFrame extends JFrame {
                 BurgerTypePanel.setVisible(false);
                 BaseBurger burger = new VegaBurger();
 
-                /*try {
-                    IndustrialConfigFrame industrialConfigFrame = new IndustrialConfigFrame((Industrial) industrial);
-                } catch (SQLException ex) {
-                    ex.printStackTrace();
-                }*/
+                VegaBurgerMenuFrame vegaBurgerMenuFrame = new VegaBurgerMenuFrame();
                 dispose();
             }
         });
