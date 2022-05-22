@@ -1,6 +1,6 @@
 package database;
 
-import dbclass.User;
+import dbclass.Users;
 
 import java.sql.*;
 
@@ -10,7 +10,7 @@ public class MySQLConnect {
     private static String password = "";
     private static Connection connection;
 
-    public static User connectedUSer;
+    public static Users connectedUSer;
 
     public static ResultSet executeQuery(String sql) throws SQLException {
         PreparedStatement statement = connection.prepareStatement(sql);
