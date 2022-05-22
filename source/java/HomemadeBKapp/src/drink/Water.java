@@ -2,7 +2,7 @@ package drink;
 
 public abstract class Water implements IWater{
 private int price;
-//private int quantity;
+
 private boolean ishot;
 private boolean hasice;
 
@@ -15,7 +15,7 @@ private boolean hasice;
 
     public boolean hasIce() {return hasice;}
     public void setIce(boolean hasice) {
-        if(ishot == true)
+        if(ishot)
             this.hasice = false;
         else
         this.hasice = hasice;
