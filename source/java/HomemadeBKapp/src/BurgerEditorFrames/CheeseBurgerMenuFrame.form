@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="frames.VegaBurgerMenuFrame">
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="BurgerEditorFrames.CheeseBurgerMenuFrame">
   <grid id="27dc6" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
@@ -8,7 +8,7 @@
     <properties/>
     <border type="none"/>
     <children>
-      <grid id="ed25d" binding="Panel" layout-manager="GridLayoutManager" row-count="7" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="52b09" binding="Panel" layout-manager="GridLayoutManager" row-count="7" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
@@ -16,7 +16,7 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="23846" class="javax.swing.JLabel">
+          <component id="3383a" class="javax.swing.JLabel">
             <constraints>
               <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -24,7 +24,7 @@
               <text value="Price"/>
             </properties>
           </component>
-          <component id="f6a9f" class="javax.swing.JLabel">
+          <component id="86396" class="javax.swing.JLabel">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -32,7 +32,7 @@
               <text value="Meat:"/>
             </properties>
           </component>
-          <component id="cbc78" class="javax.swing.JButton" binding="NextButton">
+          <component id="37460" class="javax.swing.JButton" binding="NextButton">
             <constraints>
               <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -40,7 +40,7 @@
               <text value="Next"/>
             </properties>
           </component>
-          <component id="acd5d" class="javax.swing.JLabel">
+          <component id="ea02c" class="javax.swing.JLabel">
             <constraints>
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -48,23 +48,23 @@
               <text value="Ketchup:"/>
             </properties>
           </component>
-          <component id="1c9d2" class="javax.swing.JLabel">
+          <component id="412f1" class="javax.swing.JLabel">
             <constraints>
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Mustard:"/>
+              <text value="Mustár"/>
             </properties>
           </component>
-          <component id="f11a0" class="javax.swing.JLabel">
+          <component id="22160" class="javax.swing.JLabel">
             <constraints>
               <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Mayonnaise:"/>
+              <text value="Majonéz:"/>
             </properties>
           </component>
-          <component id="dcf14" class="javax.swing.JLabel">
+          <component id="78d39" class="javax.swing.JLabel">
             <constraints>
               <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -72,7 +72,7 @@
               <text value="Extra:"/>
             </properties>
           </component>
-          <component id="45a49" class="javax.swing.JLabel">
+          <component id="dcf64" class="javax.swing.JLabel" binding="PriceLabel">
             <constraints>
               <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -80,7 +80,7 @@
               <text value=""/>
             </properties>
           </component>
-          <component id="87ab0" class="javax.swing.JCheckBox" binding="ketchupCheckbox">
+          <component id="77e66" class="javax.swing.JCheckBox" binding="ketchupCheckBox">
             <constraints>
               <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -89,7 +89,7 @@
               <text value=""/>
             </properties>
           </component>
-          <component id="f93a2" class="javax.swing.JCheckBox" binding="mustardCheckBox">
+          <component id="8d853" class="javax.swing.JCheckBox" binding="mustardCheckbox">
             <constraints>
               <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -98,7 +98,7 @@
               <text value=""/>
             </properties>
           </component>
-          <component id="d0841" class="javax.swing.JCheckBox" binding="mayonnaiseCheckBox">
+          <component id="17bf3" class="javax.swing.JCheckBox" binding="mayonnaiseCheckbox">
             <constraints>
               <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -107,24 +107,26 @@
               <text value=""/>
             </properties>
           </component>
-          <component id="f40e0" class="javax.swing.JComboBox" binding="extraSelect">
+          <component id="3829b" class="javax.swing.JComboBox" binding="ExtraSelect">
             <constraints>
               <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <model>
                 <item value="None"/>
+                <item value="Extra sajt"/>
                 <item value="Saláta"/>
               </model>
             </properties>
           </component>
-          <component id="399eb" class="javax.swing.JComboBox" binding="meatSelect">
+          <component id="55ad8" class="javax.swing.JComboBox" binding="meatSelector">
             <constraints>
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <model>
-                <item value="Fakemeat"/>
+                <item value="Sertés"/>
+                <item value="Csirke"/>
                 <item value="None"/>
               </model>
             </properties>

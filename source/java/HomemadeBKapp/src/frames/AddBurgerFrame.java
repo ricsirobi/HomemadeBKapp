@@ -1,5 +1,8 @@
 package frames;
 
+import BurgerEditorFrames.CheeseBurgerMenuFrame;
+import BurgerEditorFrames.ChickenBurgerMenuFrame;
+import BurgerEditorFrames.VegaBurgerMenuFrame;
 import burger.BaseBurger;
 import burger.CheeseBurger;
 import burger.ChickenBurger;
@@ -63,7 +66,6 @@ public class AddBurgerFrame extends JFrame {
                 logger.info("VegaBurger button clicked");
                 BurgerTypePanel.setVisible(false);
                 BaseBurger burger = new VegaBurger();
-
                 VegaBurgerMenuFrame vegaBurgerMenuFrame = new VegaBurgerMenuFrame();
                 dispose();
             }

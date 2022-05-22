@@ -20,4 +20,5 @@ public class Drink {
     public void setSavour(Savour savour) {this.savour = savour;}
     public void setHasIce(int hasIce) {this.hasIce = hasIce;}
     public void setId(int id) {this.id=id;}
+
 }

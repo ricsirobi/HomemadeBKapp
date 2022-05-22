@@ -1,5 +1,6 @@
-package frames;
+package DrinkEditorFrames;
 
+import frames.ReadyOrderForm;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -9,13 +10,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ChickenBurgerMenuFrame extends JFrame {
+public class IceTeaMenuFrame extends JFrame {
     private JPanel Panel;
-    private JCheckBox mayonnaiseCheckBox;
-    private JCheckBox mustardCheckBox;
-    private JCheckBox ketchupCheckbox;
-    private JComboBox extraSelect;
-    private JComboBox meatSelect;
+    private JComboBox savourSelect;
     private JButton NextButton;
     private JLabel PriceLabel;
     private JCheckBox ketchupCheckBox;
@@ -24,11 +21,11 @@ public class ChickenBurgerMenuFrame extends JFrame {
     private JCheckBox mustardCheckbox;
     private JCheckBox mayonnaiseCheckbox;
 
-    public ChickenBurgerMenuFrame() {
+    public IceTeaMenuFrame() {
         setContentPane(Panel);
-        Logger logger = LoggerFactory.getLogger(CheeseBurgerMenuFrame.class);
+        Logger logger = LoggerFactory.getLogger(IceTeaMenuFrame.class);
         setSize(800, 600);
-        setTitle("ChickenBurger editor");
+        setTitle("IceTea editor");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
         setSize(400, 300);
@@ -44,10 +41,15 @@ public class ChickenBurgerMenuFrame extends JFrame {
         NextButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //megyünk tovább az italokhoz
+                ReadyOrderForm readyframe = new ReadyOrderForm();
+                dispose();
+                //TODO: mentés
             }
         });
     }
 
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
+    }
 }
 
