@@ -2,6 +2,9 @@ package dbclass;
 
 public class Drink {
     private int id;
+    private int isHot;
+    private int hasCo2;
+
 
 
 

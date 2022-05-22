@@ -1,16 +1,14 @@
 package drink;
 
-import burger.Meat;
-
 public class SoftDrink extends Soda{
 
 
-    private ESyrup syrup;
+    private Savour syrup;
 
-    public ESyrup getSyrup() {
+    public Savour getSyrup() {
         return syrup;
     }
-    public void setSyrup(ESyrup setsyrup){syrup = setsyrup;}
+    public void setSyrup(Savour setsyrup){syrup = setsyrup;}
 
     @Override
     public int Price() {

@@ -2,12 +2,12 @@ package drink;
 
 public class HotTea extends Water {
 
-    private Tea tea;
+    private Savour tea;
 
-    public Tea getTea() {
+    public Savour getTea() {
         return tea;
     }
-    public void setTea(Tea settea){tea = settea;}
+    public void setTea(Savour settea){tea = settea;}
 
     @Override
     public int Price() {
