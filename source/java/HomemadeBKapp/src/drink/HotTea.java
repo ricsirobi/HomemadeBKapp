@@ -2,12 +2,7 @@ package drink;
 
 public class HotTea extends Water {
 
-    private Savour tea;
 
-    public Savour getTea() {
-        return tea;
-    }
-    public void setTea(Savour settea){tea = settea;}
 
     @Override
     public int Price() {
@@ -19,5 +14,8 @@ public class HotTea extends Water {
         return true;
     }
 
-
+    @Override
+    public boolean getco2() {
+        return false;
+    }
 }

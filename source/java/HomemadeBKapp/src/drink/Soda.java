@@ -1,7 +1,6 @@
 package drink;
 
 public class Soda extends Water {
-    private boolean hasco2 = true;
 
     @Override
     public int Price() {
@@ -18,6 +17,8 @@ public class Soda extends Water {
         return false;
     }
 
-    public boolean hasCo2() {return hasco2;}
-
+    @Override
+    public boolean getco2() {
+        return true;
+    }
 }

@@ -1,5 +1,11 @@
 package DrinkEditorFrames;
 
+import drink.HotTea;
+import drink.IceTea;
+import drink.Savour;
+import drink.Water;
+import order.OrderFunctions;
+import order.SelectedDrinkInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -8,6 +14,7 @@ import javax.swing.plaf.ColorUIResource;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 public class IceTeaMenuFrame extends JFrame {
     private JPanel Panel;
@@ -40,8 +47,23 @@ public class IceTeaMenuFrame extends JFrame {
         NextButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                ////////////////////////////////////////////////////
+                Water w = new IceTea();
+
+                switch (savourSelect.getSelectedIndex())
+                {
+                    case 0: w.setSavour(Savour.Green); break;
+                    case 1: w.setSavour(Savour.Peach); break;
+                    case 2: w.setSavour(Savour.Lemon); break;
+                }
+                SelectedDrinkInfo.d = w;
+                ////////////////////////////////////////////////////
+                try {
+                    OrderFunctions.upload();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
                 dispose();
-                //TODO: mentés
             }
         });
     }

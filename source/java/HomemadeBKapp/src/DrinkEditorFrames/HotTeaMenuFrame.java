@@ -1,6 +1,16 @@
 package DrinkEditorFrames;
 
+import burger.BaseBurger;
+import burger.CheeseBurger;
+import burger.Meat;
+import dbclass.Extra;
+import drink.HotTea;
+import drink.Savour;
+import drink.Water;
+import frames.AddDrinkFrame;
 import order.OrderFunctions;
+import order.SelectedBurgerInfo;
+import order.SelectedDrinkInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,17 +20,13 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class HotTeaMenuFrame extends JFrame {
     private JPanel Panel;
     private JComboBox savourSelect;
     private JButton NextButton;
     private JLabel PriceLabel;
-    private JCheckBox ketchupCheckBox;
-    private JComboBox ExtraSelect;
-    private JComboBox meatSelector;
-    private JCheckBox mustardCheckbox;
-    private JCheckBox mayonnaiseCheckbox;
 
     public HotTeaMenuFrame() {
         setContentPane(Panel);
@@ -42,14 +48,23 @@ public class HotTeaMenuFrame extends JFrame {
         NextButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //ReadyOrderForm readyframe = new ReadyOrderForm();
-                //dispose();
-                //TODO: mentés
+                ////////////////////////////////////////////////////
+                Water w = new HotTea();
+
+                switch (savourSelect.getSelectedIndex())
+                {
+                    case 0: w.setSavour(Savour.Green); break;
+                    case 1: w.setSavour(Savour.Peach); break;
+                    case 2: w.setSavour(Savour.Lemon); break;
+                }
+                SelectedDrinkInfo.d = w;
+                ////////////////////////////////////////////////////
                 try {
                     OrderFunctions.upload();
                 } catch (SQLException throwables) {
                     throwables.printStackTrace();
                 }
+                dispose();
             }
         });
     }

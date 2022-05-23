@@ -20,4 +20,8 @@ public class IceTea extends Water{
         return true;
     }
 
+    @Override
+    public boolean getco2() {
+        return false;
+    }
 }
