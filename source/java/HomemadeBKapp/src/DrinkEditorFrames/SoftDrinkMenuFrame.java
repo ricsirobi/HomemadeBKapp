@@ -1,6 +1,5 @@
 package DrinkEditorFrames;
 
-import frames.ReadyOrderForm;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,7 +36,6 @@ public class SoftDrinkMenuFrame extends JFrame {
         NextButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ReadyOrderForm readyframe = new ReadyOrderForm();
                 dispose();
                 //TODO: mentés
             }

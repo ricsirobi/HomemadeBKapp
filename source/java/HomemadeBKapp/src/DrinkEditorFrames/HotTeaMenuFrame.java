@@ -1,7 +1,6 @@
 package DrinkEditorFrames;
 
-import frames.AddDrinkFrame;
-import frames.ReadyOrderForm;
+import order.OrderFunctions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,6 +9,7 @@ import javax.swing.plaf.ColorUIResource;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 public class HotTeaMenuFrame extends JFrame {
     private JPanel Panel;
@@ -42,9 +42,14 @@ public class HotTeaMenuFrame extends JFrame {
         NextButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ReadyOrderForm readyframe = new ReadyOrderForm();
-                dispose();
+                //ReadyOrderForm readyframe = new ReadyOrderForm();
+                //dispose();
                 //TODO: mentés
+                try {
+                    OrderFunctions.upload();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
             }
         });
     }

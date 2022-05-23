@@ -1,6 +1,12 @@
 package BurgerEditorFrames;
 
+import burger.BaseBurger;
+import burger.CheeseBurger;
+import burger.ChickenBurger;
+import burger.Meat;
+import dbclass.Extra;
 import frames.AddDrinkFrame;
+import order.SelectedBurgerInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -9,15 +15,15 @@ import javax.swing.plaf.ColorUIResource;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class ChickenBurgerMenuFrame extends JFrame {
     private JPanel Panel;
     private JCheckBox mayonnaiseCheckBox;
     private JCheckBox mustardCheckBox;
     private JCheckBox ketchupCheckbox;
-    private JComboBox extraSelect;
-    private JComboBox meatSelect;
     private JButton NextButton;
+    private JCheckBox saladCheckBox;
     private JLabel PriceLabel;
 
     public ChickenBurgerMenuFrame() {
@@ -40,6 +46,24 @@ public class ChickenBurgerMenuFrame extends JFrame {
         NextButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                ////////////////////////////////////////////////////
+                BaseBurger b = new ChickenBurger();
+                b.setKetchup(ketchupCheckbox.isSelected());
+                b.setMayonnaise(mayonnaiseCheckBox.isSelected());
+                b.setMustard(mustardCheckBox.isSelected());
+
+
+                if(saladCheckBox.isSelected())
+                {
+                    b.setExtraid(2);
+                }
+                else
+                {
+                    b.setExtraid(3);
+                }
+
+                SelectedBurgerInfo.b = b;
+                ////////////////////////////////////////////////////
                 AddDrinkFrame drinkframe = new AddDrinkFrame();
                 dispose();
             }

@@ -7,6 +7,7 @@ import burger.BaseBurger;
 import burger.CheeseBurger;
 import burger.ChickenBurger;
 import burger.VegaBurger;
+import dbclass.Burger;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,12 +16,14 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
 public class AddBurgerFrame extends JFrame {
     private JButton CheeseburgerButton;
     private JButton ChickenburgerButton;
     private JButton VegaburgerButton;
     private JPanel ConfPanel;
     private JPanel BurgerTypePanel;
+
 
     public AddBurgerFrame() {
         Logger logger = LoggerFactory.getLogger(AddBurgerFrame.class);
@@ -44,7 +47,6 @@ public class AddBurgerFrame extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 logger.info("CheeseBurger button clicked");
                 BurgerTypePanel.setVisible(false);
-                BaseBurger burger = new CheeseBurger();
                 CheeseBurgerMenuFrame cheeseBurgerMenuFrame = new CheeseBurgerMenuFrame();
                 dispose();
             }
@@ -54,7 +56,6 @@ public class AddBurgerFrame extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 logger.info("ChickenBurger button clicked");
                 BurgerTypePanel.setVisible(false);
-                BaseBurger burger = new ChickenBurger();
 
                 ChickenBurgerMenuFrame chickenBurgerMenuFrame = new ChickenBurgerMenuFrame();
                 dispose();
@@ -65,7 +66,6 @@ public class AddBurgerFrame extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 logger.info("VegaBurger button clicked");
                 BurgerTypePanel.setVisible(false);
-                BaseBurger burger = new VegaBurger();
                 VegaBurgerMenuFrame vegaBurgerMenuFrame = new VegaBurgerMenuFrame();
                 dispose();
             }

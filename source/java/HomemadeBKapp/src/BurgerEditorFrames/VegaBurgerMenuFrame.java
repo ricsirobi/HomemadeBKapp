@@ -1,6 +1,10 @@
 package BurgerEditorFrames;
 
+import burger.BaseBurger;
+import burger.ChickenBurger;
+import burger.VegaBurger;
 import frames.AddDrinkFrame;
+import order.SelectedBurgerInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,10 +19,8 @@ public class VegaBurgerMenuFrame extends JFrame {
     private JCheckBox mayonnaiseCheckBox;
     private JCheckBox mustardCheckBox;
     private JCheckBox ketchupCheckbox;
-    private JComboBox extraSelect;
-    private JComboBox meatSelect;
     private JButton NextButton;
-    private JLabel PriceLabel;
+    private JCheckBox saladCheckBox;
 
 
     public VegaBurgerMenuFrame() {
@@ -41,12 +43,30 @@ public class VegaBurgerMenuFrame extends JFrame {
         NextButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                ////////////////////////////////////////////////////
+                BaseBurger b = new VegaBurger();
+                b.setKetchup(ketchupCheckbox.isSelected());
+                b.setMayonnaise(mayonnaiseCheckBox.isSelected());
+                b.setMustard(mustardCheckBox.isSelected());
+
+                if(saladCheckBox.isSelected())
+                {
+                    b.setExtraid(2);
+                }
+                else
+                {
+                    b.setExtraid(3);
+                }
+                SelectedBurgerInfo.b = b;
+                ////////////////////////////////////////////////////
                 AddDrinkFrame drinkframe = new AddDrinkFrame();
                 dispose();
-                //TODO: mentés
             }
         });
     }
 
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
+    }
 }
 

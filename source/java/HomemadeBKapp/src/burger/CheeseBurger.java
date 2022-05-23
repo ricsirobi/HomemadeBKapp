@@ -10,7 +10,12 @@ public class CheeseBurger extends BaseBurger {
 
     @Override
     public Meat getMeat() {
-        return Meat.beef;
+        return super.getMeat();
+    }
+
+    @Override
+    public int getExtraid() {
+        return 1;
     }
 
     public boolean hasCheese() {

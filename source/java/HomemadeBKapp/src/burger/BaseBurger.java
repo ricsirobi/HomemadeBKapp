@@ -7,6 +7,7 @@ public abstract class BaseBurger implements IBaseBurger {
     private boolean hasmustard;
     private boolean hasmayonnaise;
     private Meat mymeat;
+    private int extraid;
 
     public Meat getMeat(){return mymeat;}
     public void setMeat(Meat setm){mymeat = setm;}
@@ -32,6 +33,13 @@ public abstract class BaseBurger implements IBaseBurger {
     }
     public void setMayonnaise(boolean sauce) {
         hasmayonnaise = sauce;
+    }
+
+    public int getExtraid() {
+        return extraid;
+    }
+    public void setExtraid(int extraid) {
+        this.extraid = extraid;
     }
 
 
